@@ -77,6 +77,10 @@ article {
 .state_hover {
   box-shadow: 0 0 10px 5px inset #000;
 }
+.content-eq-one{
+  background:black;
+  color:#fff;
+}
 .cont-span {
   font-size: 30px;
   display: flex;

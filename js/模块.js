@@ -9,9 +9,9 @@
 function state_i(id) {
   state.forEach((e) => {
     if (e.id === id) {
-      fun(id);
+      progress_bar(id);
       // 调用生成内容
-      addNum(e.code, e.id);
+      addContent(e.code, e.id);
       localStorage.setItem("code", e.code);
       localStorage.setItem("id", e.id);
     }
@@ -28,7 +28,7 @@ function state_span() {
   }
 }
 // 进度条显示与 游戏关卡判断 ， state_i函数内使用
-function fun(arr) {
+function progress_bar(arr) {
   $("#jdt").css({ width: ` ${25 * arr}%` });
 }
 

@@ -29,16 +29,16 @@ $("#content").on("click", "i", function () {
   state_i(id);
 });
 // span点击事件
-$("#content").on("click", "span", function () {
-  if ($("#content").children()[0] == this) {
-    state_span();
-  } else {
-    alert("错误");
-    var code = localStorage.getItem("code");
-    var id = localStorage.getItem("id");
-    addNum(code, id);
-  }
-});
+// $("#content").on("click", "span", function () {
+//   if ($("#content").children()[0] == this) {
+//     state_span();
+//   } else {
+//     alert("错误");
+//     var code = localStorage.getItem("code");
+//     var id = localStorage.getItem("id");
+//     addNum(code, id);
+//   }
+// });
 // 按键事件
 $(document).on("keyup", function (e) {
   var text = $("#content").children()[0];
@@ -53,6 +53,6 @@ $(document).on("keyup", function (e) {
     alert("错误");
     var code = localStorage.getItem("code");
     var id = localStorage.getItem("id");
-    addNum(code, id);
+    addContent(code, id);
   }
 });
