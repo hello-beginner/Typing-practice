@@ -1,32 +1,8 @@
-// 生成i标签状态
-var _state_num = 0;
-// 生成i标签
-function _state(arr) {
-  if (_state_num >= 4) {
-    // alert("通关");
-    alert("恭喜你，通关了");
-    $("#content").html("已通关");
-    $("#content").css({
-      background: "skyblue",
-      display: "flex",
-      "justify-content": "center",
-      "align-items": "center",
-      "font-size": "30px",
-    });
-    return;
-  }
-  var str = "";
-
-  str += `<i date-id="${arr[_state_num].id}"class="state">${arr[_state_num].name}</i>`;
-  $("#content").html(str);
-  _state_num++;
-}
 // 初始化界面
 _state(state);
 // i点击事件
 $("#content").on("click", "i", function () {
-  var id = parseInt($(this).attr("date-id"));
-  state_i(id);
+  state_i(date_id($(this)));
 });
 // span点击事件
 // $("#content").on("click", "span", function () {
@@ -41,14 +17,16 @@ $("#content").on("click", "i", function () {
 // });
 // 按键事件
 $(document).on("keyup", function (e) {
-  var text = $("#content").children()[0];
-  var num = $(text).text();
-  var text2 = parseInt($(text).attr("date-id"));
-  // console.log(num);
-  if (num === e.key) {
+  // 获取到的i标签
+  var i_tabName = $("#content").children()[0];
+  // 获取到i 标签与span标签的值
+  var i_span_val = $(i_tabName).text();
+  // i标签的自定义属性
+  var i_id = date_id($(i_tabName));
+  if (i_span_val === e.key) {
     state_span();
-  } else if (text2 == 1 || text2 == 2 || text2 == 3 || text2 == 4) {
-    keyStyle(text2)
+  } else if (i_id == 1 || i_id == 2 || i_id == 3 || i_id == 4) {
+    keyStyle(i_id);
   } else {
     alert("错误");
     var code = localStorage.getItem("code");
