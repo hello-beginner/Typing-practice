@@ -24,22 +24,28 @@ function _state(arr) {
   $("#content").html(str);
   _state_num++;
 }
-// 生成大小写字母
+// 生成大小写字母 数字 符号
 function letter(if_else) {
-  //小写
+  let num_ber=[]
   var Small_letter = [];
+  let Large_letter=[]
+  for (var i = 0; i < 10; i++) {
+    num_ber.push(i);
+  }
   for (var i = 97; i < 123; i++) {
     Small_letter.push(String.fromCharCode(i));
   }
-  //  大写
-  var Large_letter = [];
+ 
   for (var i = 65; i < 91; i++) {
     Large_letter.push(String.fromCharCode(i));
   }
-  if (if_else) {
+  if (if_else == 1) {
+    return num_ber;
+  } else if (if_else == 2) {
     return Small_letter;
-  } else {
+  } else if (if_else == 3) {
     return Large_letter;
+  } else {
   }
 }
 // 事件内函数 简单  普通 。。。。等
@@ -109,6 +115,6 @@ function shuffle(shuffle_arr) {
   return shuffle_arr;
 }
 // 获取i标签身上的id
-function date_id(id){
+function date_id(id) {
   return parseInt(id.attr("date-id"));
 }

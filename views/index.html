@@ -10,13 +10,33 @@
 </head>
 
 <body>
-    <!-- <button id="btn">按钮</button> -->
+    <!-- 难度选择 -->
+    <div class="difficulty" id="dif">
+        <div class="dif-top">
+            <div class="dif-cont" data-id="1">
+                简单
+            </div>
+            <div class="dif-cont" data-id="2">
+                普通
+            </div>
+            <div class="dif-cont" data-id="3">
+                一般
+            </div>
+            <div class="dif-cont" data-id="4">
+                困难
+            </div>
+        </div>
+        <div class="checkbox">
+            <div><input type="checkbox" name="dif" id="" value="1">数字</div>
+            <div><input type="checkbox" name="dif" id="" value="2">小写字母</div>
+            <div><input type="checkbox" name="dif" id="" value="3">大写字母</div>
+            <div><input type="checkbox" name="dif" id="" value="4">符号</div>
+        </div>
+    </div>
     <main>
         <div>登录存储浏览器</div>
         <div>
             <aside id="content">
-                <!-- <i id="state.id">${state.name}</i> -->
-                <!-- <span class="cont-span"></span> -->
             </aside>
             <aside>
                 <article id="progress_bar_id"></article>
@@ -27,7 +47,7 @@
     <script src="../js/content.js"></script>
     <script src="../js/function.js"></script>
     <script src="../js/state.js"></script>
-    <script src="../js/index.js"></script>  
+    <script src="../js/index.js"></script>
 </body>
 
 </html>

@@ -34,3 +34,38 @@ $(document).on("keyup", function (e) {
     addContent(code, id);
   }
 });
+
+// 点击选择难度
+$(".dif-top div").click(function () {
+  // 获取难度id
+  let index = $(this).attr("data-id");
+  Small_letter = "";
+  // 初始化 选择框
+  for (let i = 0; i < $(".checkbox div input").length; i++) {
+    $(".checkbox div input")[i].checked = false;
+  }
+  // 便利生产不同难度随机内容
+  for (let i = 0; i < index; i++) {
+    let num = Math.floor(Math.random() * $(".dif-top div").length);
+    // console.log(num);
+    // 判断是否为符号 否则让用户重新选择
+    if (num == 3) {
+      alert("'符号'功能未完善，请重新选择");
+      return;
+    }
+    // 给选中的打上勾 开关属性 true false
+    $(".checkbox div input")[num].checked = true;
+    // console.log(num);
+    // 调用函数生产内容
+    Small_letter += letter(num + 1);
+    // 去重
+    Small_letter=Array.from(new Set(Small_letter))
+    // 去掉多余不相关内容
+    Array.from(new Set(Small_letter)).forEach((e,index)=>{
+      if(e==','){
+        Small_letter.splice(index,1)
+      }
+    })
+    console.log(Small_letter);
+  }
+});

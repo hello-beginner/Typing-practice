@@ -23,12 +23,12 @@ main {
   flex-flow: column;
 }
 
-div:nth-child(1) {
+main div:nth-child(1) {
   text-align: center;
   line-height: 4vw;
 }
 
-div:nth-child(2) {
+main div:nth-child(2) {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -77,9 +77,9 @@ article {
 .state_hover {
   box-shadow: 0 0 10px 5px inset #000;
 }
-.content-eq-one{
-  background:black;
-  color:#fff;
+.content-eq-one {
+  background: black;
+  color: #fff;
 }
 .cont-span {
   font-size: 30px;
@@ -96,4 +96,33 @@ article {
 }
 .cont-span-hover-two {
   box-shadow: 0 0 10px 5px inset #000;
+}
+
+/*难度选择部分 */
+/*  */
+.difficulty {
+  position: absolute;
+  top: 5vh;
+  left: 1vh;
+  display: flex;
+  width: 20vw;
+  height: 6vh;
+  flex-flow: column;
+}
+.dif-top {
+  display: flex;
+  justify-content: space-evenly;
+}
+.dif-cont {
+  border: 1px solid #fff;
+  cursor: pointer;
+  color: #fff;
+  padding: 10px;
+}
+.checkbox {
+  padding: 20px 1px;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }

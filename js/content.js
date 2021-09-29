@@ -1,5 +1,10 @@
 // 封装的生成内容，点击、按键 状态--关卡时调用
 function addContent(code, id) {
+  // 判断是否选择难度 必须选则
+  if(!Small_letter){
+    alert('请选择难度')
+    return
+  }
   // var num1=[]
   // for(var i=0;i<20;i++){
   //   num1.push( Math.floor(Math.random() * 11))
@@ -7,8 +12,8 @@ function addContent(code, id) {
   // }
   // console.log(num1);
   // 随机生成不等位数字和字母
-  // var num2 = parseInt(code / num1);
-  // var num3 = parseInt(code - num2);
+  var num2 = parseInt(code / num1);
+  var num3 = parseInt(code - num2);
   var num3 = parseInt(code);
   var newArr = [];
   // 生成数字
