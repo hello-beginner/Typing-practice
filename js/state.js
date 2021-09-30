@@ -52,15 +52,23 @@ const style_data = {
   styleName: ["height"],
 };
 // 绑定标签
-const TabName = {
-  // 绑定content
-  content: `${$("#content")}`,
-  // 绑定全部span
-  content_span_all: `${$("#content").children()}`,
-  // 绑定第一个span
-  content_span_eq: `${$("#content").children().eq(1)}`,
-  // 绑定进度条
-  progress_bar_id: `${$("#progress_bar_id")}`,
-  // 绑定关卡状态 --  简单...  困难...
-  state: `${$(".state")}`,
-};
+// const TabName = {
+//   // 绑定content
+//   content: `${$("#content")}`,
+//   // 绑定全部span
+//   content_span_all: `${$("#content").children()}`,
+//   // 绑定第一个span
+//   content_span_eq: `${$("#content").children().eq(1)}`,
+//   // 绑定进度条
+//   progress_bar_id: `${$("#progress_bar_id")}`,
+//   // 绑定关卡状态 --  简单...  困难...
+//   state: `${$(".state")}`,
+// };
+// export default {
+//   state,
+//   num_ber,
+//   Small_letter,
+//   Large_letter,
+//   _state_num,
+//   style_data,
+// };

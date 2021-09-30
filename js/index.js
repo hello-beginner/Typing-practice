@@ -1,5 +1,9 @@
+// import _STATE from './state.js';
+// import _fun from './function.js';
+// console.log(_STATE);
 // 初始化界面
-_state(state);
+// _fun._state_i_(_STATE.state);
+_state_i_(state);
 // i点击事件
 $("#content").on("click", "i", function () {
   state_i(date_id($(this)));
@@ -39,6 +43,10 @@ $(document).on("keyup", function (e) {
 $(".dif-top div").click(function () {
   // 获取难度id
   let index = $(this).attr("data-id");
+  // 判断是否存在，如果存在，是否重新生成
+  if (Small_letter) {
+    if (!confirm("是否重新生成"))return;
+  }
   Small_letter = "";
   // 初始化 选择框
   for (let i = 0; i < $(".checkbox div input").length; i++) {
@@ -57,15 +65,16 @@ $(".dif-top div").click(function () {
     $(".checkbox div input")[num].checked = true;
     // console.log(num);
     // 调用函数生产内容
+
     Small_letter += letter(num + 1);
     // 去重
-    Small_letter=Array.from(new Set(Small_letter))
+    Small_letter = Array.from(new Set(Small_letter));
     // 去掉多余不相关内容
-    Array.from(new Set(Small_letter)).forEach((e,index)=>{
-      if(e==','){
-        Small_letter.splice(index,1)
+    Array.from(new Set(Small_letter)).forEach((e, index) => {
+      if (e == ",") {
+        Small_letter.splice(index, 1);
       }
-    })
-    console.log(Small_letter);
+    });
+    // console.log(Small_letter);
   }
 });

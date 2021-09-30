@@ -5,7 +5,7 @@
         progress_bar(arr)
 */
 // 生成i标签
-function _state(arr) {
+function _state_i_(arr) {
   if (_state_num >= 4) {
     // alert("通关");
     alert("恭喜你，通关了");
@@ -118,3 +118,4 @@ function shuffle(shuffle_arr) {
 function date_id(id) {
   return parseInt(id.attr("date-id"));
 }
+// export default {_state_i_, letter,state_i,state_span,progress_bar,keyStyle,contInit_style,shuffle,date_id}
