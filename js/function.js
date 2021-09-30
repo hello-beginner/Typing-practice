@@ -68,7 +68,7 @@ function state_span() {
   if ($("#content").children().length <= 0) {
     alert("下一关");
     $("#content").removeClass(`${style_data.className[4]}`);
-    _state(state);
+    _state_i_(state);
   }
 }
 // 进度条显示
