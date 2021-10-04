@@ -127,6 +127,147 @@ article {
   align-items: center;
 }
 
-
 /* 登录/注册 */
+.login {
+  position: absolute;
+  top: 5vh;
+  right: 5vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.state-login {
+  display: none;
+}
+.login .login-register a {
+  margin: 10px;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+}
+.login .login-register a::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  height: 1px;
+  left: 50%;
+  width: 0;
+  background: #fff;
+  transition: all 0.5s;
+}
+.login .login-register a:hover::after {
+  width: 100%;
+  left: 0%;
+}
+.login .user {
+  display: flex;
+  overflow: hidden;
+  flex-flow: column;
+  align-items: center;
+  height: 52px;
+}
+.user.active {
+  transition: all 1s;
+  height: 410px;
+}
+.user .user-header {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.user .user-header .userImg img {
+  width: 45px;
+  height: 45px;
+}
+.user .user-header .nickname {
+  flex: 1;
+}
 
+.user .user-content {
+  display: flex;
+  width: 200px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  flex-flow: column;
+}
+
+.user .user-content div {
+  width: 100%;
+  display: flex;
+  margin: 5px 0;
+  justify-content: space-between;
+}
+.user-header-i {
+  margin-top: -5px;
+  transition: all 0.3s;
+  border: 5px solid #ccc;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid transparent;
+}
+.user-header-i.active {
+  margin-top: 5px;
+  border: 5px solid #ccc;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+.user .user-content .user-content-r {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.user-cj,
+.user-gr {
+  cursor: pointer;
+}
+.user-cj.active,
+.user-gr.active {
+  height: 200px;
+}
+.user-cj .user-content-r,
+.user-gr .user-content-r {
+  justify-content: flex-end !important;
+}
+.user .user-content .user-content-r .user-content-i {
+  margin-bottom: 5px;
+  transition: all 0.3s;
+  border: 5px solid #ccc;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid transparent;
+}
+.user .user-content .user-content-r .user-content-i.active {
+  margin-top: 5px;
+  transition: all 0.3s;
+  border: 5px solid #ccc;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+.user .log-out {
+  width: 80px;
+  height: 30px;
+  color: red;
+  text-align: center;
+  line-height: 30px;
+  margin: 5px 10px;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 12px;
+  background: rgb(0, 0, 0);
+  transition: all 0.3s;
+  box-shadow: 0 0 10px 5px rgb(255, 0, 0);
+}
+.user .log-out:hover {
+  background: #fff;
+  color: #000;
+  font-size: 16px;
+  box-shadow: none;
+}

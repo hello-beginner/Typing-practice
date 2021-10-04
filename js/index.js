@@ -28,14 +28,13 @@ $(document).on("keyup", function (e) {
   // i标签的自定义属性
   var i_id = date_id($(i_tabName));
   // console.log(e.keyCode);
-  if(e.keyCode == 123 || e.keyCode == 20) return
+  if (e.keyCode == 123 || e.keyCode == 20) return;
   if (i_span_val === e.key) {
     state_span();
-  } else if(i_span_val == (e.keyCode == 16 && e.key)){
+  } else if (i_span_val == (e.keyCode == 16 && e.key)) {
     console.log(ss);
-  }else if(e.keyCode == 16){
-
-  }else if (i_id == 1 || i_id == 2 || i_id == 3 || i_id == 4) {
+  } else if (e.keyCode == 16) {
+  } else if (i_id == 1 || i_id == 2 || i_id == 3 || i_id == 4) {
     keyStyle(i_id);
   } else {
     alert("错误");
@@ -51,7 +50,8 @@ $(".dif-top div").click(function () {
   let index = $(this).attr("data-id");
   // 判断是否存在，如果存在，是否重新生成
   if (Small_letter) {
-    if (!confirm("是否重新生成难度 --\r\n--  必须完成本关卡才会重新生成内容"))return;
+    if (!confirm("是否重新生成难度 --\r\n--  必须完成本关卡才会重新生成内容"))
+      return;
   }
   Small_letter = "";
   // 初始化 选择框
@@ -84,3 +84,24 @@ $(".dif-top div").click(function () {
     // console.log(Small_letter);
   }
 });
+
+// 登录部分
+// 头部下拉
+$(".user-header-i").click(function () {
+    $(".user").toggleClass("active");
+    $(this).toggleClass('active')
+});
+// 内容下拉
+$('.user-cj').click(function(){
+  user_i(this)
+})
+$('.user-gr').click(function(){
+  user_i(this)
+})
+// 样式类名改变
+function user_i(id){
+  $(id).siblings().children().children().removeClass('active')
+  $(id).children().children().toggleClass('active')
+  $(id).toggleClass('active')
+  $(id).siblings().removeClass('active')
+}

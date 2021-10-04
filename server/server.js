@@ -16,12 +16,10 @@ app.get("/data", (req, res) => {
   let sql = `select * from userName`;
   cont.query(sql, (err, data) => {
     if (err) console.log(err);
-    data.forEach((e) => {
       res.send({
         code: 200,
         msg: "ok",
-        e,
-      });
+        data,
     });
   });
 });
